@@ -1,0 +1,44 @@
+/* 「ペース計」の紙の見た目に合わせる（生成りの紙・墨・藍・朱） */
+:root {
+  --paper: #f6f1e8;
+  --raised: #fbf8f2;
+  --ink: #2a2521;
+  --ink2: #6b635b;
+  --line: #e2d9cb;
+  --ai: #2f4a78;
+  --shu: #c2543a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1c1a17;
+    --raised: #262320;
+    --ink: #ede6da;
+    --ink2: #a9a096;
+    --line: #34302b;
+    --ai: #8fa8d8;
+    --shu: #e27d62;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.85;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1.5px solid var(--ink); }
+header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+h1, h2 { font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; font-weight: 600; }
+h1 { font-size: 1.6rem; margin: 0; }
+h1 span { display: inline-block; font-size: 1.1rem; color: var(--ink2); }
+h2 { font-size: 1.2rem; margin-top: 2.2em; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+section.lang { margin-top: 32px; }
+section.lang + section.lang { border-top: 1.5px solid var(--ink); padding-top: 8px; }
+.updated, footer, .sub { color: var(--ink2); font-size: 0.9rem; }
+a { color: var(--ai); }
+nav { margin-top: 6px; font-size: 0.95rem; }
+li { margin: 0.2em 0; }
+strong { font-weight: 600; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); }
